@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,10 +11,10 @@
 
 body {
   background-color: rgb(223, 223, 223);
-  
+  width: auto;
 }
 
-.container {
+.main {
   display: flex;
   flex-direction: column;  
 }
