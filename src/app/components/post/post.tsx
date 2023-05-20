@@ -12,14 +12,14 @@ import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 // }
 
 const Post: FunctionComponent<Props> = ({ }) => (
-    <div className="bg-white w-[700px] rounded-md relative self-center">
+    <div className="bg-white w-[700px] rounded-md relative self-center mb-5">
         <div className="m-6 m-y-3">
             <div className="flex mt-3 gap-x-4">
                 <h3 className="">Author</h3>
-                <p className="text-gray-500">7 минут</p>
+                <p className="text-grey">7 минут</p>
                 <div className="absolute right-6 flex gap-x-4 ">
-                    <PersonAddRoundedIcon />
-                    <MoreHorizRoundedIcon />
+                    <PersonAddRoundedIcon color="primary"/>
+                    <MoreHorizRoundedIcon sx={{ color: 'grey'}}/>
                 </div>
 
             </div>
@@ -27,14 +27,14 @@ const Post: FunctionComponent<Props> = ({ }) => (
             <p className="mt-5">Надеюсь что Ubisoft Connect исчезнет в глубинах ада. Плохой лаучер от Плохой конторы.</p>
             <div className="mt-3 flex gap-x-4">
                 <div className="flex">
-                    <FavoriteBorderIcon />
-                    <p>4</p>
+                    <FavoriteBorderIcon sx={{ color: 'grey'}}/>
+                    <p className="text-grey">4</p>
                 </div>
-                <ChatBubbleOutlineRoundedIcon />
-                <AutorenewIcon />
-                <BookmarkBorderIcon />
+                <ChatBubbleOutlineRoundedIcon sx={{ color: 'grey'}} />
+                <AutorenewIcon sx={{ color: 'grey'}}/>
+                <BookmarkBorderIcon sx={{ color: 'grey'}}/>
                 <div className="absolute right-6">
-                    <DownloadOutlinedIcon />
+                    <DownloadOutlinedIcon sx={{ color: 'grey'}}/>
                 </div>
             </div>
         </div>

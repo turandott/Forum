@@ -26,13 +26,13 @@ const Comment: FunctionComponent<Props> = ({ }) => (
             <p className="mt-5">Надеюсь что Ubisoft Connect исчезнет в глубинах ада. Плохой лаучер от Плохой конторы.</p>
             <div className="mt-3 flex gap-x-4">
                 <div className="flex">
-                    <FavoriteBorderIcon />
-                    <p>4</p>
+                    <FavoriteBorderIcon sx={{ color: 'grey'}}/>
+                    <p className="text-grey">4</p>
                 </div>
-                <p>ответить</p>
+                <p className="text-grey">ответить</p>
 
                 <div className="absolute right-6">
-                    <DownloadOutlinedIcon />
+                    <DownloadOutlinedIcon sx={{ color: 'grey'}}/>
                 </div>
             </div>
         </div>

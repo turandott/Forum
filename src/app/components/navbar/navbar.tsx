@@ -7,10 +7,10 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 // }
 
 const Navbar: FunctionComponent<Props> = ({ }) => (
-    <div className="bg-blue h-20 w-full">
+    <div className="bg-blue h-20 w-full mb-5">
         <div className="mx-28 flex justify-between pt-6">
             <ul className="flex gap-20 ">
-                <li><MenuIcon /></li>
+                <li><MenuIcon fontSize="large"/></li>
                 <li>Icon</li>
 
             </ul>
@@ -19,8 +19,8 @@ const Navbar: FunctionComponent<Props> = ({ }) => (
             <li>создать</li>
         </ul>
             <ul className="flex gap-x-20">
-                <li><ChatBubbleOutlineIcon /></li>
-                <li><NotificationsNoneIcon /></li>
+                <li><ChatBubbleOutlineIcon fontSize="large"/></li>
+                <li><NotificationsNoneIcon fontSize="large"/></li>
                 <li>icon</li>
                 <li>войти</li>
             </ul>
