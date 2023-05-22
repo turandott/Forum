@@ -6,7 +6,7 @@ import React, { FunctionComponent } from 'react'
 // }
 
 const ProfileCard: FunctionComponent<Props> = ({ }) => (
-    <div className="bg-white w-[950px] h-[500px] rounded-md relative self-center mb-5">
+    <div className="w-full bg-white lg:w-[950px] h-[500px] rounded-md relative self-center mb-5">
         <div className='h-2/5 w-full  bg-slate-300'>
         </div>
         <div className="mx-10 mb-10">

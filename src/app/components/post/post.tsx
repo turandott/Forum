@@ -12,7 +12,7 @@ import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 // }
 
 const Post: FunctionComponent<Props> = ({ }) => (
-    <div className="bg-white w-[700px] rounded-md relative self-center mb-5">
+    <div className="w-full bg-white md:w-[700px] md:rounded-md relative self-center mb-5">
         <div className="m-6 py-3">
             <div className="flex mt-3 gap-x-4">
                 <h3 className="">Author</h3>

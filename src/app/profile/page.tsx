@@ -22,9 +22,9 @@ const ProfilePage: FunctionComponent<Props> = ({ }) => (
         <>
             <div className="main">
                 <ProfileCard />
-                <div className="main w-[950px] relative self-center">
+                <div className="w-full main md:w-[950px] relative self-center">
 
-                    <div className="flex flex-col absolute right-0">
+                    <div className="hidden lg:flex flex-col absolute right-0">
                         <SubscribersCard />
                         <SubscriptionCard />
                     </div>

@@ -16,8 +16,16 @@ module.exports = {
         'background': '#dfdfdf',
         'blue': '#90e0ef',
         'light-blue': '#caf0f8',
-        'grey':'#848B9A'
-      }
+        'grey': '#848B9A'
+      },
+      screens: {
+        "s": "400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
     },
   },
   plugins: [],

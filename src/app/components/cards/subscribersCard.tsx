@@ -6,7 +6,7 @@ import React, { FunctionComponent } from 'react'
 // }
 
 const SubscribersCard: FunctionComponent<Props> = ({ }) => (
-    <div className="bg-white w-[240px] h-[100px] rounded-md relative self-center mb-5 mt-5">
+    <div className="hidden lg:block bg-white w-[240px] h-[100px] rounded-md relative self-center mb-5 mt-5">
         <div className="m-2">
             <h1 className="font-semibold">Подписчики 4</h1>
             <div className="mt-2 flex gap-x-3">

@@ -5,6 +5,7 @@ import Post from './components/post/post'
 import Comment from './components/comment/comment'
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
+import SideComments from './components/sideComments/sideComments';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Navbar />
         <div className="main">
           <Sidebar />
+          <SideComments/>
           <Post />
           <Comment />
         </div>
