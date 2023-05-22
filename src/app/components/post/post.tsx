@@ -13,28 +13,28 @@ import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 
 const Post: FunctionComponent<Props> = ({ }) => (
     <div className="bg-white w-[700px] rounded-md relative self-center mb-5">
-        <div className="m-6 m-y-3">
+        <div className="m-6 py-3">
             <div className="flex mt-3 gap-x-4">
                 <h3 className="">Author</h3>
                 <p className="text-grey">7 минут</p>
                 <div className="absolute right-6 flex gap-x-4 ">
-                    <PersonAddRoundedIcon color="primary"/>
-                    <MoreHorizRoundedIcon sx={{ color: 'grey'}}/>
+                    <PersonAddRoundedIcon color="primary" />
+                    <MoreHorizRoundedIcon sx={{ color: 'grey' }} />
                 </div>
 
             </div>
-            <h1 className="my-3 text-3xl font-semibold">Post</h1>
+            <h1 className="my-2 text-3xl font-semibold">Post</h1>
             <p className="mt-5">Надеюсь что Ubisoft Connect исчезнет в глубинах ада. Плохой лаучер от Плохой конторы.</p>
-            <div className="mt-3 flex gap-x-4">
+            <div className="my-3 flex gap-x-4">
                 <div className="flex">
-                    <FavoriteBorderIcon sx={{ color: 'grey'}}/>
+                    <FavoriteBorderIcon sx={{ color: 'grey' }} />
                     <p className="text-grey">4</p>
                 </div>
-                <ChatBubbleOutlineRoundedIcon sx={{ color: 'grey'}} />
-                <AutorenewIcon sx={{ color: 'grey'}}/>
-                <BookmarkBorderIcon sx={{ color: 'grey'}}/>
+                <ChatBubbleOutlineRoundedIcon sx={{ color: 'grey' }} />
+                <AutorenewIcon sx={{ color: 'grey' }} />
+                <BookmarkBorderIcon sx={{ color: 'grey' }} />
                 <div className="absolute right-6">
-                    <DownloadOutlinedIcon sx={{ color: 'grey'}}/>
+                    <DownloadOutlinedIcon sx={{ color: 'grey' }} />
                 </div>
             </div>
         </div>

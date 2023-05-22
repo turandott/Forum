@@ -13,7 +13,10 @@ import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 
 const PostPage: FunctionComponent<Props> = ({ }) => (
     <div className="">
-        <h1>dfklkdf</h1>
+     
+            <h1 className="my-3 text-3xl font-semibold">Post</h1>
+            
+           
     </div>
 )
 
