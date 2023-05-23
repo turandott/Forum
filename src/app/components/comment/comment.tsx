@@ -1,11 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
-import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineRounded';
-import PersonAddRoundedIcon from '@mui/icons-material/PersonAddRounded';
-import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
+import { Tooltip } from '@mui/material';
 
 // type Props = {
 //   post: string;
@@ -26,13 +22,16 @@ const Comment: FunctionComponent<Props> = ({ }) => (
             <p className="mt-5">Надеюсь что Ubisoft Connect исчезнет в глубинах ада. Плохой лаучер от Плохой конторы.</p>
             <div className="mt-3 flex gap-x-4">
                 <div className="flex">
-                    <FavoriteBorderIcon sx={{ color: 'grey'}}/>
+                    <Tooltip title="Лайк">
+                        <FavoriteBorderIcon sx={{ color: 'grey' }} />
+                    </Tooltip>
                     <p className="text-grey">4</p>
                 </div>
                 <p className="text-grey">ответить</p>
-
                 <div className="absolute right-6">
-                    <DownloadOutlinedIcon sx={{ color: 'grey'}}/>
+                    <Tooltip title="Дизлайк">
+                        <DownloadOutlinedIcon sx={{ color: 'grey' }} />
+                    </Tooltip>
                 </div>
             </div>
         </div>

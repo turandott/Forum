@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import { Tooltip } from '@mui/material';
 // type Props = {
 //   post: string;
 // }
@@ -20,9 +21,13 @@ const Navbar: FunctionComponent<Props> = ({ }) => (
                 <li>создать</li>
             </ul>
             <ul className="flex gap-x-20 md:mr-10">
-                <li className="md:hidden"><HomeOutlinedIcon fontSize="large"/></li>
-                <li><ChatBubbleOutlineIcon fontSize="large" /></li>
-                <li><NotificationsNoneIcon fontSize="large" /></li>
+                <li className="md:hidden"><HomeOutlinedIcon fontSize="large" /></li>
+                <Tooltip title="Сообщения">
+                    <li><ChatBubbleOutlineIcon fontSize="large" /></li>
+                </Tooltip>
+                <Tooltip title="Уведомления">
+                    <li><NotificationsNoneIcon fontSize="large" /></li>
+                </Tooltip>
                 <li>icon</li>
             </ul>
         </div>

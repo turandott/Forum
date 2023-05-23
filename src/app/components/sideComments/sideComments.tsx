@@ -5,7 +5,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 // }
 
 const SideComments: FunctionComponent<Props> = ({ }) => (
-    <div className="hidden lg:block pt-2 pl-5 absolute right-10 w-[250px] ">
+    <div className="hidden xl:block pt-2 pl-5 absolute right-10 w-[250px] ">
         <h1 className="font-semibold text-lg mb-10">Комментарии 
         <span><ChevronRightIcon/></span>
          </h1>
