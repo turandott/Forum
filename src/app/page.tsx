@@ -10,15 +10,10 @@ import SideComments from './components/sideComments/sideComments';
 export default function Home() {
   return (
     <>
-      <div className="">
-        <Navbar />
-        <div className="main">
-          <Sidebar />
-          <SideComments/>
-          <Post />
-          <Comment />
-        </div>
-      </div>
+
+        <Post />
+        <Comment />
+
     </>
   )
 }

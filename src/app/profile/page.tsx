@@ -8,7 +8,6 @@ import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineR
 import PersonAddRoundedIcon from '@mui/icons-material/PersonAddRounded';
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
-import basicLayout from './layout';
 import Post from '../components/post/post';
 import ProfileCard from '../components/cards/profileCard';
 import SubscribersCard from '../components/cards/subscribersCard';
@@ -18,9 +17,7 @@ import SubscriptionCard from '../components/cards/subscriptionCard';
 // }
 
 const ProfilePage: FunctionComponent<Props> = ({ }) => (
-    <basicLayout>
         <>
-            <div className="main">
                 <ProfileCard />
                 <div className="w-full main md:w-[950px] relative self-center">
 
@@ -29,15 +26,12 @@ const ProfilePage: FunctionComponent<Props> = ({ }) => (
                         <SubscriptionCard />
                     </div>
                     <div className="absolute">
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
+                       <Post/>
+                       <Post/>
+                       <Post/>
                     </div>
                 </div>
-            </div>
         </>
-    </basicLayout >
 )
 
 export default ProfilePage

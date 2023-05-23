@@ -17,9 +17,15 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider theme={theme}>
         <CssBaseline />
-       
-          {children}
+        <body>
+          <Navbar />
+          <div className="main">
+            <Sidebar />
+            <SideComments />
 
+            {children}
+          </div>
+        </body>
       </ThemeProvider>
     </html>
   )
