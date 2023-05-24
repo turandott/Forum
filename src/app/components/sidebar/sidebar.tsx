@@ -11,8 +11,8 @@ import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';// type Props 
 
 const Sidebar: FunctionComponent<Props> = ({ }) => (
     <div className="hidden lg:block pt-2 pl-5 absolute w-[2500px]">
-        <ul className="text-2xl grid gap-y-5">
-            <li>
+        <ul className="text-2xl grid gap-y-5 font-mono">
+            <li >
                 <AccessTimeIcon fontSize="large" sx={{ color: 'grey' }} />
                 Популярное
             </li>
