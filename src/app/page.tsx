@@ -10,6 +10,7 @@ import SkeletonPost from './components/post/SkeletonPost';
 import SkeletonSideComments from './components/sideComments/SkeletonSideComments';
 import { useEffect, useState } from 'react';
 import SkeletonComment from './components/comment/SkeletonComment';
+import { CustomButton } from './components/buttons/buttons';
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
@@ -32,7 +33,6 @@ export default function Home() {
         :
         <Comment />
       }
-
     </>
   )
 }
