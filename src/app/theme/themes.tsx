@@ -8,18 +8,6 @@ export const darkTheme = createTheme({
   },
 });
 
-export const themeTooltip = createTheme({
-  components: {
-    MuiTooltip: {
-      styleOverrides: {
-        tooltip: {
-          fontSize: "2em",
-         
-        },
-      },
-    },
-  },
-});
 
 export const theme = createTheme({
   components: {

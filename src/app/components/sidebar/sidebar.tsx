@@ -6,13 +6,13 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import ListIcon from '@mui/icons-material/List';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';// type Props = {
-//   post: string;
-// }
+import '@fontsource/montserrat';
+
 
 const Sidebar: FunctionComponent<Props> = ({ }) => (
     <div className="hidden lg:block pt-2 pl-5 absolute w-[2500px]">
-        <ul className="text-2xl grid gap-y-5 font-mono">
-            <li >
+        <ul className="font-montserrat text-2xl grid gap-y-5">
+            <li>
                 <AccessTimeIcon fontSize="large" sx={{ color: 'grey' }} />
                 Популярное
             </li>

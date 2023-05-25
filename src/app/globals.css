@@ -1,20 +1,22 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-
-}
+:root {}
 
 
 body {
   background-color: rgb(223, 223, 223);
   width: auto;
+  font-family: "Roboto", "Helvetica", "Arial", "Montserrat", sans-serif;
+  ;
 }
 
 .main {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+}
+
+.font-montserrat{
+  font-family: "Montserrat"
 }
