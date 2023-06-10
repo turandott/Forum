@@ -19,4 +19,15 @@ export const theme = createTheme({
       },
     },
   },
+  palette: {
+    primary: {
+      main: '#007bff',
+    },
+    secondary: {
+      main: '#6c757d',
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+  },
 });
