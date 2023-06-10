@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { auth } from '../api/api';
 
 type Props = {};
 
@@ -16,15 +17,16 @@ const LoginPage: FunctionComponent<Props> = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    const credentials = {
       email: data.get('email'),
       password: data.get('password'),
-    });
+    };
+    auth(credentials)
   };
 
   return (
     <div className="w-full main md:w-[950px] relative self-center">
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" className='bg-white p-5'>
         <Box
           sx={{
             marginTop: 8,

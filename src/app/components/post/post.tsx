@@ -12,12 +12,12 @@ import { Tooltip, Typography } from '@mui/material';
 //   post: string;
 // }
 
-const Post: FunctionComponent<Props> = ({ }) => (
+const Post: FunctionComponent<Props> = ({post}) => (
     <div className="w-full bg-white md:w-[700px] md:rounded-md relative self-center mb-5">
         <div className="m-6 py-3">
             <div className="flex mt-3 gap-x-4">
                 <h3 className="">Author</h3>
-                <p className="text-grey">7 минут</p>
+                <p className="text-grey">{post.updatedAt}</p>
                 <div className="absolute right-6 flex gap-x-4 ">
                     <Tooltip title="Подписаться">
                         <PersonAddRoundedIcon color="primary" />
@@ -26,8 +26,8 @@ const Post: FunctionComponent<Props> = ({ }) => (
                 </div>
 
             </div>
-            <h1 className="my-2 text-3xl font-semibold">Post</h1>
-            <p className="mt-5">Надеюсь что Ubisoft Connect исчезнет в глубинах ада. Плохой лаучер от Плохой конторы.</p>
+            <h1 className="my-2 text-3xl font-semibold">{post.title}</h1>
+            <p className="mt-5">{post.text}</p>
             <div className="my-3 flex gap-x-4">
                 <div className="flex">
                     <Tooltip title="Лайк">

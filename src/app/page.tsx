@@ -3,36 +3,44 @@
 import Image from 'next/image'
 import Post from './components/post/post'
 import Comment from './components/comment/comment'
-import Navbar from './components/navbar/navbar';
-import Sidebar from './components/sidebar/sidebar';
-import SideComments from './components/sideComments/sideComments';
 import SkeletonPost from './components/post/SkeletonPost';
 import SkeletonSideComments from './components/sideComments/SkeletonSideComments';
 import { useEffect, useState } from 'react';
 import SkeletonComment from './components/comment/SkeletonComment';
-import { CustomButton } from './components/buttons/buttons';
+import ModalUp from './components/modal/modal';
+import getPosts from './api/api';
+import axios from "axios";
+
 
 export default function Home() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 3000)
+    const fetchPosts = async () => {
+      const res = await getPosts();
+      setPosts(res);
+      setLoading(false);
+    }
+    fetchPosts();
   }, [])
 
+  console.log(posts)
   return (
     <>
       {loading ?
         <SkeletonPost />
         :
-        <Post />
+        posts.map(post => (
+          <Post key={post.id} post={post} />
+        ))
       }
-      {loading ?
+      {/* {loading ?
         <SkeletonComment />
         :
         <Comment />
-      }
+      } */}
     </>
   )
 }
+
