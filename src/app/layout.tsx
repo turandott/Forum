@@ -6,25 +6,23 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
 import SideComments from './components/sideComments/sideComments';
+import { Providers } from '../../store/provider';
 
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <body>
-          <Navbar />
-          <div className="main">
-            <Sidebar />
-            <SideComments />
+          <Providers>
+            <Navbar />
+            <div className="main">
+              <Sidebar />
+              <SideComments />
 
-            {children}
-          </div>
+              {children}
+            </div>
+          </Providers>
         </body>
       </ThemeProvider>
     </html>
