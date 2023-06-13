@@ -17,9 +17,14 @@ export const auth = async (data: any): Promise<any> => {
     try {
         const response = await axios.post(`${URL}/auth/login`, data);
         console.log(response.data);
-        return response.data;
+
+        if (response.status === 200) {
+            return { status: 'ok', token: response.data.token };
+        } else {
+            return { status: 'error' };
+        }
     } catch (error) {
         console.error(error);
-        return [];
+        return { status: 'error' };
     }
 };

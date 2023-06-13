@@ -9,11 +9,16 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { auth } from '../api/api';
+import { auth } from '../../api/api';
+import { useDispatch } from 'react-redux';
+import { setIsAuthenticated, setUser } from '../../../../store/authSlice';
+import { AppDispatch } from '../../../../store/store';
 
 type Props = {};
 
 const LoginPage: FunctionComponent<Props> = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -21,7 +26,17 @@ const LoginPage: FunctionComponent<Props> = () => {
       email: data.get('email'),
       password: data.get('password'),
     };
-    auth(credentials)
+    const res = auth(credentials)
+    console.log(res)
+    if (res) {
+      dispatch(setIsAuthenticated(true))
+      dispatch(setUser({res}))
+    }
+    else{
+      alert("Invalid credentials")
+    }
+
+
   };
 
   return (

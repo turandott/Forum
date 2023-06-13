@@ -6,7 +6,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
 import SideComments from './components/sideComments/sideComments';
-import { Providers } from '../../store/provider';
+import { Providers } from './provider';
 
 export default function RootLayout({ children }) {
   return (
