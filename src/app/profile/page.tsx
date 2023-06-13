@@ -26,9 +26,9 @@ const ProfilePage: FunctionComponent<Props> = ({ }) => (
                         <SubscriptionCard />
                     </div>
                     <div className="absolute">
+                       {/* <Post/>
                        <Post/>
-                       <Post/>
-                       <Post/>
+                       <Post/> */}
                     </div>
                 </div>
         </>

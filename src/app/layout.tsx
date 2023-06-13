@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <body>
+        <body className='bg-background'>
           <Providers>
             <Navbar />
             <div className="main">

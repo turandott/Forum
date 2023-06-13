@@ -8,7 +8,7 @@ import SkeletonSideComments from './components/sideComments/SkeletonSideComments
 import { useEffect, useState } from 'react';
 import SkeletonComment from './components/comment/SkeletonComment';
 import ModalUp from './components/modal/modal';
-import getPosts from './api/api';
+import { getPosts } from "./api/api";
 import axios from "axios";
 
 

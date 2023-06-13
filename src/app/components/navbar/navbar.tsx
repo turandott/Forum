@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useEffect } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
@@ -8,6 +8,8 @@ import ModalUp from '../modal/ModalUp';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../../../../store/store';
+import { CustomButton } from '../buttons/buttons';
+import { setUser, setIsAuthenticated } from '../../../../store/authSlice';
 
 // type Props = {
 //   post: string;
@@ -16,6 +18,13 @@ import { AppDispatch } from '../../../../store/store';
 const Navbar: FunctionComponent<Props> = ({ }) => {
     const dispatch = useDispatch<AppDispatch>()
     const logged = useSelector(state => state.auth.isAuthenticated)
+    function handleLogout() {
+        console.log('logged out')
+        dispatch(setUser(null))
+        dispatch(setIsAuthenticated(false))
+        const logged = false
+    }
+
     return (
         <div className="bg-blue h-20 w-full">
             <div className="mx-7 flex justify-between pt-6">
@@ -38,9 +47,15 @@ const Navbar: FunctionComponent<Props> = ({ }) => {
                     </Tooltip>
                     <li>
                         {logged ?
-                            <Link href="/profile">профиль</Link>
+                            <div className='flex mt-[-30px]'>
+                                <Link href="/profile">профиль</Link>
+                                <div onClick={handleLogout} >
+                                    <CustomButton type='basic' text="выйти" />
+                                </div>
+                            </div>
                             :
                             <Link href="/login">войти</Link>
+
                         }
                         {/* icon */}
                     </li>

@@ -1,16 +1,26 @@
-'use client';
 import { configureStore } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import authReducer from "./authSlice";
-import { type } from "os";
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import persistStore from "redux-persist/es/persistStore";
+import thunk from 'redux-thunk';
 
-const makeStore = () =>
-  configureStore({
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, authReducer)
+
+export const store =configureStore({
     reducer: {
-      auth: authReducer,
+      auth: persistedReducer,
     },
+    middleware: [thunk]
   });
 
-export const store = makeStore();
-export type RootState=ReturnType<typeof store.getState>
-export type AppDispatch=typeof store.dispatch
+export const persistor = persistStore(store);
+// export const store = makeStore();
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
