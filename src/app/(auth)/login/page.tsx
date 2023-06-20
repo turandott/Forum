@@ -13,12 +13,14 @@ import { auth } from '../../api/api';
 import { useDispatch } from 'react-redux';
 import { setIsAuthenticated, setUser } from '../../../../store/authSlice';
 import { AppDispatch } from '../../../../store/store';
+import { useRouter } from 'next/navigation';
+
 
 type Props = {};
 
 const LoginPage: FunctionComponent<Props> = () => {
   const dispatch = useDispatch<AppDispatch>();
-
+  const router = useRouter();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -30,12 +32,12 @@ const LoginPage: FunctionComponent<Props> = () => {
     console.log(res)
     if (res) {
       dispatch(setIsAuthenticated(true))
-      dispatch(setUser({res}))
+      dispatch(setUser({ res }))
     }
-    else{
+    else {
       alert("Invalid credentials")
     }
-
+    router.push('/profile')
 
   };
 
@@ -51,7 +53,7 @@ const LoginPage: FunctionComponent<Props> = () => {
           }}
         >
           <Typography component="h1" variant="h5">
-            Sign in
+            Вход
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -59,7 +61,7 @@ const LoginPage: FunctionComponent<Props> = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email"
               name="email"
               autoComplete="email"
               autoFocus
@@ -69,27 +71,27 @@ const LoginPage: FunctionComponent<Props> = () => {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Пароль"
               type="password"
               id="password"
               autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Запомнить меня"
             />
             <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-              Sign In
+              Вход
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                  Забыли пароль?
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {"Нет аккаунта? Зарегестрируйтесь"}
                 </Link>
               </Grid>
             </Grid>
