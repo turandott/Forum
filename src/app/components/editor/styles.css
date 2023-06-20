@@ -1,0 +1,37 @@
+.ProseMirror{
+  max-width: 750px;
+  min-height: 500px;
+  background-color: white;
+}
+.textEditor {
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  .menuBar {
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menuBar button {
+    font-size: 16px;
+    margin: 7px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .menuBar button:last-child {
+    margin-right: 7px;
+  }
+  
+  .heading3 {
+    font-size: 15px;
+  }
+  
+  button.is_active {
+    background: rgb(197, 197, 197);
+    padding: 2px 3px;
+    border-radius: 2px;
+  }
