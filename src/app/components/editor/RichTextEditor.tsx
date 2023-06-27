@@ -8,14 +8,19 @@ import BulletList from '@tiptap/extension-bullet-list'
 import OrderedList from '@tiptap/extension-ordered-list'
 import Blockquote from '@tiptap/extension-blockquote'
 import Heading from "@tiptap/extension-heading";
+import Image from '@tiptap/extension-image'
+import Dropcursor from '@tiptap/extension-dropcursor'
+import Youtube from '@tiptap/extension-youtube'
 import React from 'react'
 import './styles.scss'
 import { Color } from '@tiptap/extension-color'
 import ListItem from '@tiptap/extension-list-item'
 import TextStyle from '@tiptap/extension-text-style'
+import Placeholder from '@tiptap/extension-placeholder'
 import { CustomButton } from '../buttons/buttons'
 import { createPost } from "../../api/api"
 import { MenuBar } from './MenuBar'
+import CustomImage from './Image'
 
 const Title = Heading.extend({
   name: "title",
@@ -36,7 +41,10 @@ export default function RichTextEditor() {
       StarterKit,
       DocumentWithTitle,
       Title,
+      Image,
+      Dropcursor,
       Paragraph,
+      CustomImage,
       Heading.configure({
         levels: [1, 2, 3],
       }),
@@ -56,15 +64,30 @@ export default function RichTextEditor() {
         HTMLAttributes: {
           class: 'blockquote',
         },
-      })
+      }),
+      Youtube.configure({
+        inline: false,
+        width: 480,
+        height: 320,
+      }),
+      Placeholder.configure({
+        showOnlyCurrent: false,
+        placeholder: ({ node }) => {
+          if (node.type.name === "title") {
+            return "What's the title?";
+          }
+          return "What's the story?";
+        },
+      }),
     ],
-    content: 
-    `
-        <h1>This is a 1st level heading</h1>
-        <h2>This is a 2nd level heading</h2>
-        <h3>This is a 3rd level heading</h3>
-        <h4>This 4th level heading will be converted to a paragraph, because levels are configured to be only 1, 2 or 3.</h4>
-      `,
+    content: `
+    <h1>Заголовок поста</h1>
+    <p>Поведай миру о своих свершениях</p>
+    <img src="https://source.unsplash.com/K9QHL52rE2k/400x200" />
+    <div data-youtube-video>
+    <iframe src="https://www.youtube.com/watch?v=cqHqLQgVCgY"></iframe>
+    </div>
+    `,
   });
 
   function handleCreatePost(editor) {
