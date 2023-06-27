@@ -14,12 +14,6 @@ module.exports = {
         'grey': '#848B9A',
         'navy-blue': '#1560BD',
       },
-      // fontFamily: {
-      //   montserrat: ['Montserrat', 'sans-serif'],
-      // },
-      // fontWeight: {
-      //   'montserrat-light': 300,
-      // },
       screens: {
         "s": "400px",
         sm: "640px",
